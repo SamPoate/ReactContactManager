@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 //TODO Arrow functions
 const Header = props => {
@@ -13,9 +14,22 @@ const Header = props => {
                 <div>
                     <ul className='navbar-nav mr-auto'>
                         <li className='nav-item'>
-                            <a href='/' className='nav-link'>
+                            <Link to='/' className='nav-link'>
+                                <i className='fas fa-home mr-2' />
                                 Home
-                            </a>
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/contact/add' className='nav-link'>
+                                <i className='fas fa-plus mr-2' />
+                                Add
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/about' className='nav-link'>
+                                <i className='fas fa-question mr-2' />
+                                About
+                            </Link>
                         </li>
                     </ul>
                 </div>

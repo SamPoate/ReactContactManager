@@ -23,12 +23,12 @@ class AddContact extends Component {
             return;
         }
 
-        if (email === ' ') {
+        if (email === '') {
             this.setState({ errors: { email: 'Email is required' } });
             return;
         }
 
-        if (phone === ' ') {
+        if (phone === '') {
             this.setState({ errors: { phone: 'Phone is required' } });
             return;
         }
@@ -53,6 +53,8 @@ class AddContact extends Component {
             phone: '',
             errors: {}
         });
+
+        this.props.history.push('/');
     };
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
